@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>IRONVANTA — Elite Performance Gym</title>
+<meta name="description" content="IRONVANTA Elite Performance Gym — Train savage. Live stronger.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+:root{--bg:#070707;--card:#101010;--text:#f4f4f4;--muted:#9c9c9c;--acid:#c8ff00;--line:#242424;--red:#ff3b30}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.055;background-image:linear-gradient(rgba(255,255,255,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.8) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 75%);z-index:-1}
+a{text-decoration:none;color:inherit}.wrap{width:min(1180px,92%);margin:auto}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(7,7,7,.84);backdrop-filter:blur(18px);z-index:50}
+.logo{font:900 31px 'Barlow Condensed';letter-spacing:1px}.logo span{color:var(--acid)}
+.navlinks{display:flex;gap:26px;font-size:13px;font-weight:700;text-transform:uppercase}.navlinks a:hover{color:var(--acid)}
+.navbtn,.btn{background:var(--acid);color:#070707;padding:13px 20px;font-weight:900;border:0;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(200,255,0,.18)}
+.hero{min-height:calc(100vh - 82px);display:grid;place-items:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,#070707 4%,rgba(7,7,7,.74) 45%,rgba(7,7,7,.18)),url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1a?auto=format&fit=crop&w=1800&q=90') center/cover;filter:saturate(.8)}
+.hero-content{position:relative;padding:90px 0;width:100%}.eyebrow{color:var(--acid);font-size:12px;font-weight:900;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
+h1{font:900 clamp(70px,11vw,155px)/.78 'Barlow Condensed';text-transform:uppercase;max-width:800px;letter-spacing:-3px}h1 em{font-style:normal;color:transparent;-webkit-text-stroke:2px #fff}
+.hero p{max-width:520px;color:#c4c4c4;margin:28px 0;font-size:16px;line-height:1.7}.hero-actions{display:flex;gap:12px;align-items:center}.ghost{border:1px solid #555;background:rgba(0,0,0,.3);color:#fff}
+.stats{display:flex;gap:50px;margin-top:70px}.stat strong{font:800 38px 'Barlow Condensed';display:block}.stat small{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:2px}
+.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:15px 0;background:#0c0c0c}.marquee div{display:inline-block;animation:scroll 18s linear infinite;font:800 22px 'Barlow Condensed';letter-spacing:3px}.marquee span{color:var(--acid);margin:0 28px}@keyframes scroll{to{transform:translateX(-50%)}}
+section{padding:110px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.kicker{font-size:11px;color:var(--acid);font-weight:900;letter-spacing:3px;text-transform:uppercase}.section-title{font:900 clamp(46px,7vw,82px)/.9 'Barlow Condensed';text-transform:uppercase}.section-copy{max-width:420px;color:var(--muted);line-height:1.7}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(145deg,#141414,#0b0b0b);border:1px solid var(--line);padding:28px;position:relative;overflow:hidden}.card:after{content:"";position:absolute;width:90px;height:90px;border:1px solid var(--acid);right:-45px;bottom:-45px;transform:rotate(45deg)}.card h3{font:800 35px 'Barlow Condensed';text-transform:uppercase}.card p{color:var(--muted);line-height:1.6;margin:14px 0 25px;font-size:14px}.price{font:900 48px 'Barlow Condensed';color:var(--acid)}.price small{font:500 12px Inter;color:#777}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:240px;gap:10px}.photo{background-size:cover;background-position:center;position:relative;min-height:0;overflow:hidden}.photo:nth-child(1){grid-row:span 2}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.72));}.photo span{position:absolute;z-index:1;bottom:15px;left:15px;font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:1px}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.review{padding:27px;background:#0f0f0f;border:1px solid var(--line)}.stars{color:var(--acid);letter-spacing:3px}.review p{line-height:1.7;color:#ccc;margin:16px 0}.review b{font-size:13px}.review small{display:block;color:#777;margin-top:4px}
+.booking{background:linear-gradient(135deg,#151515,#080808);border:1px solid #2d2d2d;padding:45px;display:grid;grid-template-columns:1fr 1fr;gap:40px}.booking h2{font:900 68px/.85 'Barlow Condensed';text-transform:uppercase}.booking p{color:var(--muted);line-height:1.7;margin-top:20px}.form{display:grid;gap:12px}.form input,.form select,.form textarea{width:100%;background:#090909;border:1px solid #303030;color:white;padding:15px;outline:none;font:inherit}.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--acid)}.form textarea{height:100px;resize:vertical}
+.postbox{display:grid;grid-template-columns:1fr 1fr;gap:15px}.post{background:#0e0e0e;border:1px solid var(--line);overflow:hidden}.post img{width:100%;height:230px;object-fit:cover;display:block}.post-body{padding:20px}.post-body h3{font:800 29px 'Barlow Condensed';text-transform:uppercase}.post-body p{color:var(--muted);font-size:13px;line-height:1.6;margin-top:8px}
+footer{border-top:1px solid var(--line);padding:35px 0;color:#777;font-size:12px;display:flex;justify-content:space-between}.acid{color:var(--acid)}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);z-index:100;place-items:center;padding:20px}.modal.show{display:grid}.modal-box{width:min(540px,100%);background:#111;border:1px solid #333;padding:30px;position:relative}.close{position:absolute;right:15px;top:10px;background:none;border:0;color:#aaa;font-size:28px;cursor:pointer}.modal h2{font:800 42px 'Barlow Condensed';text-transform:uppercase;margin-bottom:18px}.admin-note{color:#777;font-size:11px;margin-top:10px}
+@media(max-width:800px){.navlinks{display:none}.grid3,.review-grid,.booking,.postbox{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.photo:nth-child(1){grid-row:span 1}.stats{gap:22px;flex-wrap:wrap}.booking{padding:25px}.booking h2{font-size:52px}.section-head{display:block}.section-copy{margin-top:15px}h1{font-size:82px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%"><div class="logo">IRON<span>VANTA</span></div><div class="navlinks"><a href="#programs">Programs</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#posts">Posts</a></div><button class="navbtn" onclick="openBooking()">Book Trial</button></div></nav>
+
+<header class="hero"><div class="hero-bg"></div><div class="wrap hero-content"><div class="eyebrow">Elite Performance Club / Ahmedabad</div><h1>Built to<br><em>Break</em><br>Limits.</h1><p>IRONVANTA is not another gym. It's a high-intensity performance club engineered for people who refuse average.</p><div class="hero-actions"><button class="btn" onclick="openBooking()">Start Your Trial →</button><a class="btn ghost" href="#programs">Explore Programs</a></div><div class="stats"><div class="stat"><strong>4.9★</strong><small>Member Rating</small></div><div class="stat"><strong>2.8K+</strong><small>Transformations</small></div><div class="stat"><strong>24/7</strong><small>Access</small></div></div></div></header>
+<div class="marquee"><div>NO EXCUSES <span>✦</span> NO COMFORT ZONE <span>✦</span> ONLY PROGRESS <span>✦</span> NO EXCUSES <span>✦</span> NO COMFORT ZONE <span>✦</span> ONLY PROGRESS <span>✦</span></div></div>
+
+<section id="programs"><div class="wrap"><div class="section-head"><div><div class="kicker">01 / Programs</div><div class="section-title">Train Like<br>You Mean It.</div></div><p class="section-copy">Choose your weapon. Every program is coached, tracked and built around measurable performance.</p></div><div class="grid3">
+<div class="card"><div class="kicker">01</div><h3>Strength Lab</h3><p>Progressive strength training, compound lifts and expert programming for serious results.</p><div class="price">₹2,499 <small>/ month</small></div></div>
+<div class="card"><div class="kicker">02</div><h3>Hybrid X</h3><p>Strength + conditioning + athletic movement. Built for speed, stamina and power.</p><div class="price">₹3,499 <small>/ month</small></div></div>
+<div class="card"><div class="kicker">03</div><h3>Fight Camp</h3><p>Boxing fundamentals, conditioning and battle-tested circuits led by elite coaches.</p><div class="price">₹3,999 <small>/ month</small></div></div>
+</div></div></section>
+
+<section id="gallery"><div class="wrap"><div class="section-head"><div><div class="kicker">02 / The Facility</div><div class="section-title">No Ordinary<br>Gym Floor.</div></div><p class="section-copy">Industrial energy. Premium equipment. Zero distractions.</p></div><div class="gallery">
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=90')"><span>Performance Floor</span></div>
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=90')"><span>Heavy Iron</span></div>
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=90')"><span>Conditioning</span></div>
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=90')"><span>Coaching</span></div>
+<div class="photo" style="background-image:url('https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=900&q=90')"><span>Recovery</span></div>
+</div></div></section>
+
+<section id="reviews"><div class="wrap"><div class="section-head"><div><div class="kicker">03 / Member Proof</div><div class="section-title">They Did The<br>Work.</div></div><p class="section-copy">Real people. Real consistency. Real transformations.</p></div><div class="review-grid" id="reviewGrid"></div></div></section>
+
+<section id="posts"><div class="wrap"><div class="section-head"><div><div class="kicker">04 / Latest Posts</div><div class="section-title">Inside<br>Ironvanta.</div></div><button class="btn" onclick="openPost()">+ Add Post</button></div><div class="postbox" id="postGrid"></div></div></section>
+
+<section id="book"><div class="wrap"><div class="booking"><div><div class="kicker">05 / Your Move</div><h2>Book A<br>Free Trial.</h2><p>Come in. Train with us. Feel the difference. No pressure, no nonsense — just one brutal session that tells you everything.</p></div><form class="form" onsubmit="book(event)"><input id="name" required placeholder="Full name"><input id="phone" required placeholder="Phone number"><select id="program" required><option value="">Choose program</option><option>Strength Lab</option><option>Hybrid X</option><option>Fight Camp</option></select><input id="date" type="date" required><textarea id="note" placeholder="Anything we should know?"></textarea><button class="btn" type="submit">Reserve My Trial →</button></form></div></div></section>
+
+<footer><div>© 2026 IRONVANTA PERFORMANCE CLUB</div><div>Train savage. Live stronger. <span class="acid">●</span></div></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><h2 id="modalTitle">Add Post</h2><form class="form" onsubmit="addPost(event)"><input id="postTitle" required placeholder="Post title"><input id="postImage" required placeholder="Image URL"><textarea id="postText" required placeholder="Write your post..."></textarea><button class="btn">Publish Post →</button></form><div class="admin-note">Demo mode: posts are saved in this browser using localStorage.</div></div></div>
+
+<script>
+const reviews=[
+["Arjun Mehta","Lost 11kg in 4 months","The coaching is insane. I stopped guessing and finally started progressing."],
+["Riya Shah","Strength transformation","Best gym atmosphere I've experienced. The place makes you want to train."],
+["Kabir Patel","Hybrid X member","Every session feels purposeful. Equipment, coaches, music — everything hits."],
+["Dev Malhotra","Fight Camp","Came for boxing, stayed for the community. Absolute beast of a gym."],
+["Nisha Joshi","12-month member","The tracking system keeps me accountable. Results speak for themselves."],
+["Yash Trivedi","Strength Lab","Premium feel without the fake fitness influencer nonsense. Love it."]
+];
+function renderReviews(){document.getElementById('reviewGrid').innerHTML=reviews.map(r=>`<div class="review"><div class="stars">★★★★★</div><p>“${r[2]}”</p><b>${r[0]}</b><small>${r[1]}</small></div>`).join('')}
+const defaults=[
+["Sunday Grind","https://images.unsplash.com/photo-1581009146145-b5ef050c2e1a?auto=format&fit=crop&w=900&q=85","Sunday doesn't mean rest. It means you get ahead."],
+["Form > Ego","https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85","Move clean. Lift heavy. Progress forever."]
+];
+function getPosts(){return JSON.parse(localStorage.getItem('ironvantaPosts')||JSON.stringify(defaults))}
+function renderPosts(){document.getElementById('postGrid').innerHTML=getPosts().map(p=>`<article class="post"><img src="${p[1]}" onerror="this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85'"><div class="post-body"><h3>${p[0]}</h3><p>${p[2]}</p></div></article>`).join('')}
+function openBooking(){document.getElementById('book').scrollIntoView({behavior:'smooth'})}
+function book(e){e.preventDefault();const n=document.getElementById('name').value;alert(`You're in, ${n}! Your IRONVANTA trial request has been received.`);e.target.reset()}
+function openPost(){document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function addPost(e){e.preventDefault();let p=getPosts();p.unshift([postTitle.value,postImage.value,postText.value]);localStorage.setItem('ironvantaPosts',JSON.stringify(p));renderPosts();closeModal();e.target.reset();alert('Post published successfully.')}
+renderReviews();renderPosts();
+</script>
+</body>
+</html>
